@@ -53,12 +53,11 @@ class Texto{
 public class Q2 {
 	
 	public static void main(String[] args){
-        System.out.println("Hello World");
-        Texto texto = new Texto("I am the Bone of  my code\nTyping is my body and coffeine is my blood\nAs I pray Unlimited Code Works");
+        Texto texto = new Texto("I reject your reality and substitute my own!!!");
         texto.imprimir();
         System.out.println(texto.palavras());
-        System.out.println(texto.substrings("code"));
-        texto.substituir("code","paper");
+        System.out.println(texto.substrings("own"));
+        texto.substituir("your","my");
         texto.imprimir();
 	}
 }
