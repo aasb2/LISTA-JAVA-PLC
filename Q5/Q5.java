@@ -105,10 +105,13 @@ class ColecaoVetor implements Colecao {
 
 	@Override
 	public int tamanhoColecaoNaoNull() {
-		if(index > 0) {
-			System.out.println(dados[index -1].getNome());
-		}
 		return dados.length - index;
+	}
+	
+	public Pessoa getLast() {
+		if(index > 0)
+			return this.dados[index-1];
+		return null;
 	}
 
 
@@ -116,13 +119,15 @@ class ColecaoVetor implements Colecao {
 public class Q5 {
 	
 	public static void main(String[] args){
-      System.out.println("test");
       ColecaoVetor pessoas = new ColecaoVetor();
       pessoas.inserir(new Professor("Alexis Leskinen","12456789000","Neurocientista","AI development"));
       System.out.println(pessoas.tamanhoColecaoNaoNull());
+      System.out.println(pessoas.getLast().getNome());
       pessoas.inserir(new Aluno("Carl Friedrich Gauss","124456789001","124456789001","Matemática"));
       System.out.println(pessoas.tamanhoColecaoNaoNull());
+      System.out.println(pessoas.getLast().getNome());
       pessoas.inserir(new Professor("Newton","123123123123","Cientista","Fisica"));
       System.out.println(pessoas.tamanhoColecaoNaoNull());
+      System.out.println(pessoas.getLast().getNome());
 	}
 }
